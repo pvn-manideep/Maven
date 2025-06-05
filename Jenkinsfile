@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/your-username/my-maven-project.git'
+                git credentialsId: 'github-token', url: 'https://github.com/pvn-manideep/Maven.git'
             }
         }
 
@@ -29,10 +29,5 @@ pipeline {
                 sh 'ansible-playbook -i inventory.ini deploy.yml'
             }
         }
-        stage('Checkout Code') {
-    steps {
-        git credentialsId: 'github-token', url: 'https://github.com/pvn-manideep/Maven.git'
-    }
-}
     }
 }
