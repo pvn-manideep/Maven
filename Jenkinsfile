@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'ci-java-app'  // Matches the name you’ll configure in Jenkins tools
+        maven 'Maven'  // Matches the name you’ll configure in Jenkins tools
     }
 
     stages {
